@@ -1,0 +1,675 @@
+TO OPEN THE ASSOCIATED EDITOR :
+
+scien@Sciencegeek MINGW64 ~/OneDrive/Desktop/Git_Folder (master)
+$ code .
+
+TO CREATE A NEW REPO:
+
+scien@Sciencegeek MINGW64 ~/OneDrive/Desktop/Git_Folder (master)
+$ git init
+
+OUTPUT:
+Initialized empty Git repository in C:/Users/scien/OneDrive/Desktop/Git_Folder/.git/
+
+TO SEE ALL DIRECTORIES
+
+scien@Sciencegeek MINGW64 ~/OneDrive/Desktop/Git_Folder (master)
+$ ls -lart
+total 16
+drwxr-xr-x 1 scien 197609 0 Mar 24 13:34 ../
+drwxr-xr-x 1 scien 197609 0 Mar 24 13:53 ./
+drwxr-xr-x 1 scien 197609 0 Mar 24 13:53 .git/
+
+STATUS CHECK:
+
+scien@Sciencegeek MINGW64 ~/OneDrive/Desktop/Git_Folder (master)
+$ git status
+On branch master
+
+OUTPUT:
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   Index.html
+
+
+OUTPUT(IF THE FILE IS NOT ADDED):
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Index.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+TO ADD THE FILE DO THIS:
+
+scien@Sciencegeek MINGW64 ~/OneDrive/Desktop/Git_Folder (master)
+$ git add Index.html
+
+NOW COMMIT!:
+
+scien@Sciencegeek MINGW64 ~/OneDrive/Desktop/Git_Folder (master)
+$ git commit  <---
+
+COMPLICATED STEPS AHEAD ->
+THIS COMMAND WILL OPEN THE "WIM" EDITOR:
+ENTER 'I' AND THEN TYPE "Initial commit"
+PRESS "ESCAPE" AND ENTER ":wq" 
+
+OUTPUT:
+
+[master (root-commit) c7aea02] Initial commit
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 Index.html
+		 
+		IF YOU ENTER...
+				scien@Sciencegeek MINGW64 ~/OneDrive/Desktop/Git_Folder (master)
+				$ git status
+				
+				OUTPUT:
+
+				On branch master
+				nothing to commit, working tree clean
+
+
+
+TO CREATE AN EMPTY FILE:
+
+scien@Sciencegeek MINGW64 ~/OneDrive/Desktop/Git_Folder (master)
+$ touch about.html
+
+TO ADD MULTIPLE FILES ALTOGETHER:
+
+scien@Sciencegeek MINGW64 ~/OneDrive/Desktop/Git_Folder (master)
+$ git add -A  <-
+
+		IT WILL SHOW THIS MESSAGE(ADDS THEM INTO STAGING AREA)...
+							scien@Sciencegeek MINGW64 ~/OneDrive/Desktop/Git_Folder (master)
+							$ git status
+							On branch master
+							Changes to be committed:
+  								(use "git restore --staged <file>..." to unstage)
+    								    	new file:   about.html
+        								new file:   contact.html
+        								new file:   monuments.html
+
+IF YOU MAKE ANY CHANGE IN ONE OF THE "STAGED FILES"...
+
+scien@Sciencegeek MINGW64 ~/OneDrive/Desktop/Git_Folder (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   about.html
+        new file:   contact.html  <---FILE IN THE STAGING AREA
+        new file:   monuments.html
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   contact.html  <---MODIFIED FILE 
+
+	THEN YOU CAN JUST ADD THEM ALL...
+							scien@Sciencegeek MINGW64 ~/OneDrive/Desktop/Git_Folder (master)
+							$ git add -A
+
+YOU CAN COMMIT THESE FILES WITHOUT A "WIM" EDITOR BY:
+
+scien@Sciencegeek MINGW64 ~/OneDrive/Desktop/Git_Folder (master)
+$ git commit -m "Added more htmls"  <-
+
+OUTPUT:
+
+[master e069357] Added more htmls
+ 3 files changed, 9 insertions(+)
+ create mode 100644 about.html
+ create mode 100644 contact.html
+ create mode 100644 monuments.html
+
+IF YOU MAKE ANY UNWANTED CHANGES TO A FILE AND SAVED IT...
+scien@Sciencegeek MINGW64 ~/OneDrive/Desktop/Git_Folder (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   contact.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+		..USE THE "CHECKOUT" CAMMAND TO RECOVER THE VERSION THAT WAS LAST COMMITTED:
+
+
+		scien@Sciencegeek MINGW64 ~/OneDrive/Desktop/Git_Folder (master)
+		$ git checkout contact.html  <-
+		Updated 1 path from the index
+
+IF YOU YOU WANT TO RECOVER MULTIPLE FILES	USE THIS CHECKOUT COMMAND:
+
+scien@Sciencegeek MINGW64 ~/OneDrive/Desktop/Git_Folder (master)
+$ git checkout -f  <--
+
+IF YOU WANT TO SEE THE ENTIRE HISTORY OF COMMITS USE "GIT LOG":
+
+scien@Sciencegeek MINGW64 ~/OneDrive/Desktop/Git_Folder (master)
+$  git log
+
+OUTPUT:
+
+commit a64147b5ad7b462f879cf6a9937f9618adc961df (HEAD -> master)
+Author: Nebula <sciencegeek057@gmail.com>
+Date:   Thu Mar 30 13:44:41 2023 +0530
+
+    Added a paragraph in monuments
+
+commit 14f3153d90671e8c8a6c3b50fe393c319b098de6
+Author: Nebula <sciencegeek057@gmail.com>
+Date:   Thu Mar 30 13:26:23 2023 +0530
+
+    filled up the monuments file
+
+commit 9eef4787181036f2df3baefd61d98e30baab3cf3
+Author: Nebula <sciencegeek057@gmail.com>
+
+IF YOU WANT TO ONLY SEE THE LAST 'n' NUMBER OF COMMITTMENT:
+
+TYPE -- "git log -p -<n>"
+FOR EXAMPLE:
+		scien@Sciencegeek MINGW64 ~/OneDrive/Desktop/Git_Folder (master)
+		$ git log -p -2
+
+OUTPUT:
+		commit a64147b5ad7b462f879cf6a9937f9618adc961df (HEAD -> master)
+		Author: Nebula <sciencegeek057@gmail.com>
+		Date:   Thu Mar 30 13:44:41 2023 +0530
+
+		    Added a paragraph in monuments
+
+		diff --git a/monuments.html b/monuments.html
+		index 56efbdb..0fcaff5 100644
+		--- a/monuments.html
+		+++ b/monuments.html
+		@@ -7,6 +7,6 @@
+		     <title>Document</title>
+		 </head>
+		 <body>
+		-
+		+    <p>You can find desert temple in desert biome</p>
+		 </body>
+		 </html>
+		\ No newline at end of file
+
+		commit 14f3153d90671e8c8a6c3b50fe393c319b098de6
+		Author: Nebula <sciencegeek057@gmail.com>
+		Date:   Thu Mar 30 13:26:23 2023 +0530
+
+		    filled up the monuments file
+
+		diff --git a/monuments.html b/monuments.html
+		index e69de29..56efbdb 100644
+		:
+
+		AND THEN PRESS 'Q' TO EXIT
+
+IN ORDER TO COMPARE YOUR WORKING TREE WITH THE STAGED AREA(IF YOU MADE A CHANGE WITHOUT COMMITTING THE FILE)....
+
+scien@Sciencegeek MINGW64 ~/OneDrive/Desktop/Git_Folder (master)
+$ git diff
+
+OUTPUT:
+
+diff --git a/monuments.html b/monuments.html
+index 0fcaff5..a1768f7 100644
+--- a/monuments.html
++++ b/monuments.html
+@@ -7,6 +7,6 @@
+     <title>Document</title>
+ </head>
+ <body>
+-    <p>You can find desert temple in desert biome</p>
++    <p>You can find desert temple in desert biome IF YOU ARE LUCKY!</p>
+ </body>
+ </html>
+\ No newline at end of file
+
+	BUT ONCE YOU COMMIT IT...
+
+		<THE WORKING DIRECTORY AND STAGED AREA WILL BECOME EQUAL THEREFORE NO DIFFERENCE>
+
+		scien@Sciencegeek MINGW64 ~/OneDrive/Desktop/Git_Folder (master)
+		$ git diff
+		
+		OUTPUT:
+
+TO SEE THE DIFFERENCE BETWEEN THE LAST COMMIT(NOT THE LAST STAGED) AND THE CURRENT WORKING  (NOTE*--IT WON'T MAKE A DIFFERENCE IF THE LAST COMMITTED FILE IS THE LAST CHANGE THAT YOU MADE):
+
+	scien@Sciencegeek MINGW64 ~/OneDrive/Desktop/Git_Folder (master)
+	$ git diff --staged <--
+
+OUTPUT:
+
+	diff --git a/monuments.html b/monuments.html
+	index a1768f7..0933bbe 100644
+	--- a/monuments.html
+	+++ b/monuments.html
+	@@ -7,6 +7,6 @@
+	     <title>Document</title>
+	 </head>
+	 <body>
+	-    <p>You can find desert temple in desert biome IF YOU ARE LUCKY!</p>
+	+    <p>You can find desert temple in desert biome IF YOU ARE LUCKY!!!</p>
+	 </body>
+	 </html>
+
+IN ORDER TO SKIP THE STAGING PROCESS AND DIRECTLY COMMIT:
+
+STATUS:
+
+[scien@Sciencegeek MINGW64 ~/OneDrive/Desktop/Git_Folder (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   monuments.html
+
+no changes added to commit (use "git add" and/or "git commit -a")]
+
+COMMAND:
+
+	scien@Sciencegeek MINGW64 ~/OneDrive/Desktop/Git_Folder (master)
+	$ git commit -a -m "Skipped staging area and fixed"
+
+OUTPUT:
+
+	[master 6756523] Skipped staging area and fixed
+	 1 file changed, 1 insertion(+), 1 deletion(-)
+
+IN CASE YOU ACCIDENTLY CREATED AN UNWANTED FILE ADDED AND COMMITED IT:
+
+2 WAYS:
+	1--REMOVE THE FILE FROM STAGING AREA:
+		scien@Sciencegeek MINGW64 ~/OneDrive/Desktop/Git_Folder (master)
+		$ git rm --cached waste.html
+		rm 'waste.html'
+
+STATUS CHECK:
+
+		scien@Sciencegeek MINGW64 ~/OneDrive/Desktop/Git_Folder (master)
+		$ git status
+		On branch master
+		Changes to be committed:
+		  (use "git restore --staged <file>..." to unstage)
+		        deleted:    waste.html
+	2--DELETE THE FILE:
+		scien@Sciencegeek MINGW64 ~/OneDrive/Desktop/Git_Folder (master)
+		$ git rm waste.html <--
+  OUTPUT:   rm 'waste.html'
+
+STATUS CHECK:
+		scien@Sciencegeek MINGW64 ~/OneDrive/Desktop/Git_Folder (master)
+		$ git status
+		On branch master
+		Changes to be committed:
+		  (use "git restore --staged <file>..." to unstage)
+		        deleted:    waste.html
+DIRECTORY CHECK:
+		scien@Sciencegeek MINGW64 ~/OneDrive/Desktop/Git_Folder (master)
+		$ ls
+		Index.html  about.html  contact.html  emmet.html  monuments.html
+
+A SHORTHAND FOR STATUS COMMAND:
+
+		$ git status -s <--
+
+IF YOU MODIFY A BUNCH OF FILES AND USE THIS COMMAND...
+
+scien@Sciencegeek MINGW64 ~/OneDrive/Desktop/Git_Folder (master)
+$ git status -s
+
+OUTPUT:
+
+ M Index.html
+ M about.html
+ M contact.html
+ M emmet.html
+ M monuments.html
+
+NOW SUPPOSE YOU ADD ONE OF THE FILE SAY "monuments.html":-
+
+scien@Sciencegeek MINGW64 ~/OneDrive/Desktop/Git_Folder (master)
+$ git status -s
+ M Index.html
+ M about.html
+ M contact.html
+ M emmet.html
+M  monuments.html
+
+AND IF YOU MODIFY THAT FILE AGAIN WITHOUT ADDING IT...
+
+scien@Sciencegeek MINGW64 ~/OneDrive/Desktop/Git_Folder (master)
+$ git status -s
+ M Index.html
+ M about.html
+ M contact.html
+ M emmet.html
+MM monuments.html
+^^
+|WORKING TREE
+|
+STAGING AREA
+
+#GITIGNORE
+
+GITIGNORE IS FILE WHICH MAKES THE FILE CONTAINED BY IT INVISIBLE (THESE FILES GET IGNORED)
+
+CREATING GITIGNORE:
+$ touch .gitignore <--
+
+IN ORDER TO SEE THIS FILE IN ACTION LETS CREATE A FILE CALLED "mylogs.log".
+$ touch mylogs.log
+
+THIS FILE CONTAINS LOGS (Ofcourse!) of <I DONT KNOW> WHICH BASICALLY STORES HUMANGOBOORUS AMOUNTS OF DATA IN IT SO WE BETTER IGNORE THIS FILE WHILE COLLABORATING WITH OTHERS.
+
+STATUS CHECK:
+		scien@Sciencegeek MINGW64 ~/OneDrive/Desktop/Git_Folder (master)
+		$ git status
+		On branch master
+		Untracked files:
+		  (use "git add <file>..." to include in what will be committed)
+		        .gitignore
+		        logs/       <--There is a folder containing "mylogs.log"
+		        mylogs.log
+
+
+SO WE SIMPLY JUST ADD THE FILE TO BE IGNORED IN ".gitignore"
+[THIS MAKES THE GIT IGNORE THE SPECIFIED FILE IRRESPECTIVE OF THE DIRECTORY IT IS PRESENT IN]
+*JUST TYPE IN THE NAME OF THE FILE(WITH EXTENSION) INSIDE .GITIGNORE.*
+
+AFTER SAVING THE GITIGNORE FILE WHEN WE PULL IN THE STATUS CHECK...
+	scien@Sciencegeek MINGW64 ~/OneDrive/Desktop/Git_Folder (master)
+	$ git status
+	On branch master
+	Untracked files:
+	  (use "git add <file>..." to include in what will be committed)
+	        .gitignore
+				<--It even ignores the log file in status check
+
+	nothing added to commit but untracked files present (use "git add" to track)
+
+AND AFTER ADDING THE FILE TO THE STAGING AREA WHEN WE PULL IN THE STATUS COMMAND...
+scien@Sciencegeek MINGW64 ~/OneDrive/Desktop/Git_Folder (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   .gitignore  <--Only shows this file!
+
+NOW IF WE ONLY WANT TO IGNORE THE FILES INSIDE ".gitignore" [NOT INSIDE ANY OTHER FILE!]
+
+WE TYPE IN THE NAME OF THE FILE INSIDE GITIGNORE FILE WITH A SLASH AT THE BEGINNING:
+ LIKE THIS... /mylogs.log
+ IF WE DO THIS AND RUN A STATUS CHECK...
+	scien@Sciencegeek MINGW64 ~/OneDrive/Desktop/Git_Folder (master)
+	$ git status
+	On branch master
+	Changes to be committed:
+	  (use "git restore --staged <file>..." to unstage)
+	        new file:   .gitignore
+	
+	Changes not staged for commit:
+	  (use "git add <file>..." to update what will be committed)
+	  (use "git restore <file>..." to discard changes in working directory)
+	        modified:   .gitignore
+	
+	Untracked files:
+	  (use "git add <file>..." to include in what will be committed)
+	        logs/  <--NOW ITS NOT IGNORING THIS DIRECTORY BECAUSE IT IS A SEPERATE DIRECTORY HOLDING THE "mylogs.log" FILE.
+ ...THE OTHER DIRECTORIES CONTAING "mylogs.log" FILE WILL NOT BE IGNORED.
+
+STATUS CHECK:
+		scien@Sciencegeek MINGW64 ~/OneDrive/Desktop/Git_Folder (master)
+		$ git status
+		On branch master
+		Changes to be committed:
+		  (use "git restore --staged <file>..." to unstage)
+		        new file:   .gitignore
+		        new file:   logs/mylogs.log  <--EVEN STARTED TRACKING IT!
+
+
+AND IF WE WANT TO IGNORE A SPECIFIC TYPE OF FILE (I.E WITH A CERTAIN EXTENSION):
+
+SAY WE WANT TO IGNORE A FILE WITH ".log" EXTENSION...
+ [WE JUST TYPE IN "*.log"]
+ BEFORE RUNNING ANYTHING IF YOU ARE TRACKING ANY FILE WITH THIS NEWLY IGNORED EXTENSION [FIRST REMOVE IT FROM THE STAGING AREA].
+ $ git rm --cached logs/mylogs.log		-------------------------[*TIP* - IF YOU WANT TO SPECIFY A FILE INSIDE A FOLDER DO IT LIKE THIS]
+OUTPUT:
+ rm 'logs/mylogs.log'
+
+NOW IF WE RUN A STATUS CHECK:
+	scien@Sciencegeek MINGW64 ~/OneDrive/Desktop/Git_Folder (master)
+	$ git status
+	On branch master
+	Changes to be committed:
+	  (use "git restore --staged <file>..." to unstage)	
+	        new file:   .gitignore
+	
+	Changes not staged for commit:
+	  (use "git add <file>..." to update what will be committed)
+	  (use "git restore <file>..." to discard changes in working directory)
+	        modified:   .gitignore  <--BRO GOT RIZZ!
+
+FURTHER PROCESSES...
+
+scien@Sciencegeek MINGW64 ~/OneDrive/Desktop/Git_Folder (master)
+$ git add -A
+
+scien@Sciencegeek MINGW64 ~/OneDrive/Desktop/Git_Folder (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   .gitignore
+
+
+[THE CHANGES THAT YOU MAKE INSIDE THE IGNORED FILES WILL NOT BE REFLECTED IN "STATUS","ADD" AND "COMMIT" COMMAND.]
+
+[AND IF WE WANT TO IGNORE A WHOLE DIRECTORY JUST TYPE IN "<FILE_NAME>/"]
+
+
+#BRANCHES
+
+IN ORDER TO MAINTAIN THE INTEGRITY OF OUR PROJECTS WE SHOULD SPLIT THEIR TIMELINE TO MAKE SURE NOTHING HAPPENS TO THE MAIN ONE.
+
+IT IS SHOWN WHEN WE RUN A STATUS CHECK:
+	scien@Sciencegeek MINGW64 ~/OneDrive/Desktop/Git_Folder (master)
+	$ git status
+	On branch master          <----------CURRENTLY IN THE "MASTER" BRANCH
+	nothing to commit, working tree clean
+
+
+TO CREATE A NEW BRANCH :
+	scien@Sciencegeek MINGW64 ~/OneDrive/Desktop/Git_Folder (master)
+	$ git branch E-199999 <-
+
+TO ENTER INTO A BRANCH USE CHECKOUT COMMAND :
+	scien@Sciencegeek MINGW64 ~/OneDrive/Desktop/Git_Folder (master)
+	$ git checkout E-199999      <-------
+OUTPUT:	
+	Switched to branch 'E-199999'
+
+STATUS CHECK:
+	scien@Sciencegeek MINGW64 ~/OneDrive/Desktop/Git_Folder (E-199999)
+	$ git status								^
+	On branch E-199999	<------------------[NOTE THE BRANCH NAME IS CHANGED!]
+	nothing to commit, working tree clean
+
+
+USE CHECKOUT COMMAND TO SWITCH BETWEEN THE [LAST COMMITS OF BRANCHES] :
+
+	FOR EXAMPLE:
+			IF YOU HAVE CHANGED A FILE IN THE OTHER BRANCH SAY ..
+			scien@Sciencegeek MINGW64 ~/OneDrive/Desktop/Git_Folder (E-199999)
+			$ git status
+			On branch E-199999
+			Changes not staged for commit:
+			  (use "git add <file>..." to update what will be committed)
+			  (use "git restore <file>..." to discard changes in working directory)
+			        modified:   monuments.html		<------MODIFIED!
+			
+			scien@Sciencegeek MINGW64 ~/OneDrive/Desktop/Git_Folder (E-199999)
+			$ git commit -a -m "Modified monuments in a new branch"
+			[E-199999 8e300bb] Modified monuments in a new branch       <-------And you even COMMITTED! the change.
+			 1 file changed, 1 insertion(+), 1 deletion(-)
+
+			
+			...AND TURNS OUT YOU DONT WANT THAT CHANGE 
+			THEN YOU CAN JUST CHECKOUT TO THE MASTER BRANCH:
+			
+			scien@Sciencegeek MINGW64 ~/OneDrive/Desktop/Git_Folder (E-199999)
+			$ git checkout master
+			Switched to branch 'master'
+			 
+			AND THE CHANGES WILL RETURN BACK TO NORMAL!
+
+SUPPOSE IF YOU WANT TO MERGE THESE BRANCHES TOGETHER [PROFESSIONALLY IT MAY MEAN THAT YOUR BOSS IS HAPPY WITH YOUR WORK]:
+
+E-199999 BRANCH LOG:
+	scien@Sciencegeek MINGW64 ~/OneDrive/Desktop/Git_Folder (E-199999)
+	$ git log
+	commit 8e300bbba781ca5aa5a76b0fbf699e5c3e69d80c (HEAD -> E-199999)
+	Author: Nebula <sciencegeek057@gmail.com>
+	Date:   Mon Apr 3 10:23:15 2023 +0530
+	
+          Modified monuments in a new branch
+		
+	commit 675d398e96c6a2a64d8f3b084d08dc2a9e2ab3c9 (master)
+	Author: Nebula <sciencegeek057@gmail.com>
+	Date:   Mon Apr 3 09:31:40 2023 +0530
+	
+	    Added .ignore file and edited it multiple times
+	
+	commit 5c5361e86c2eafa9a42b6757b8936d9fb96afd97
+
+MASTER BRANCH LOG:
+	scien@Sciencegeek MINGW64 ~/OneDrive/Desktop/Git_Folder (master)
+	$ git log
+	commit 675d398e96c6a2a64d8f3b084d08dc2a9e2ab3c9 (HEAD -> master)
+	Author: Nebula <sciencegeek057@gmail.com>
+	Date:   Mon Apr 3 09:31:40 2023 +0530
+	
+	    Added .ignore file and edited it multiple times
+	
+	commit 5c5361e86c2eafa9a42b6757b8936d9fb96afd97
+	Author: Nebula <sciencegeek057@gmail.com>
+	Date:   Sun Apr 2 22:10:09 2023 +0530
+	
+	    Removed the waste
+	
+	commit 866b839849ae2dce2322235da5a46d21a272af2f
+
+AFTER MERGING THE TWO BRANCHES:
+	scien@Sciencegeek MINGW64 ~/OneDrive/Desktop/Git_Folder (master)
+	$ git merge E-199999
+	Updating 675d398..8e300bb
+	Fast-forward
+	 monuments.html | 2 +-
+	 1 file changed, 1 insertion(+), 1 deletion(-)
+
+NOW MASTER BRANCH LOG:
+	scien@Sciencegeek MINGW64 ~/OneDrive/Desktop/Git_Folder (master)
+	$ git log
+	commit 8e300bbba781ca5aa5a76b0fbf699e5c3e69d80c (HEAD -> master, E-199999)
+	Author: Nebula <sciencegeek057@gmail.com>
+	Date:   Mon Apr 3 10:23:15 2023 +0530
+	
+	    Modified monuments in a new branch
+	
+	commit 675d398e96c6a2a64d8f3b084d08dc2a9e2ab3c9
+	Author: Nebula <sciencegeek057@gmail.com>
+	Date:   Mon Apr 3 09:31:40 2023 +0530
+	
+	    Added .ignore file and edited it multiple times
+	
+	commit 5c5361e86c2eafa9a42b6757b8936d9fb96afd97
+
+DETAILED LOG:
+	scien@Sciencegeek MINGW64 ~/OneDrive/Desktop/Git_Folder (master)
+	$ git log -p -1
+	commit 8e300bbba781ca5aa5a76b0fbf699e5c3e69d80c (HEAD -> master, E-199999)
+	Author: Nebula <sciencegeek057@gmail.com>
+	Date:   Mon Apr 3 10:23:15 2023 +0530
+	
+	    Modified monuments in a new branch
+	
+	diff --git a/monuments.html b/monuments.html
+	index 6e12912..a1768f7 100644
+	--- a/monuments.html
+	+++ b/monuments.html
+	@@ -8,5 +8,5 @@
+	 </head>
+	 <body>
+
+[NOTE] - WHILE MERGING A FEATURE BRANCH INTO A MASTER BRANCH IT IS POSSIBLE THAT A CHANGE MIGHT HAVE OCCURED INSIDE THE MASTER BRANCH AND QUITE POSSIBLY BOTH HAVE CHANGED THE SIMILIAR LINE THIS RESULTS IN MERGING CONFLICT.
+FOR EXAMPLE:
+	WENT TO THE MASTER BRANCH:
+		$ git checkout master
+		Switched to branch 'master'
+	EDITED THE contact.html :	
+		<<<<<<< HEAD(Current Change)
+		<h1>My Second Contact</h1>
+	
+	=======
+
+	WENT TO THE MASTER BRANCH:
+		$ git checkout E-199999
+		Switched to branch 'E-199999'
+	EDITED THE contact.html :	
+	<h1>My Second Contacts</h1>
+	>>>>>>> E-199999(Incoming Change)
+
+	NOW IF WE GO AHEAD AND MERGE THE 'FEATURE' BRANCH INTO THE 'MASTER' BRANCH  :
+		
+		scien@Sciencegeek MINGW64 ~/OneDrive/Desktop/Git_Folder (master)
+		$ git merge E-199999
+		Auto-merging contact.html
+		CONFLICT (content): Merge conflict in contact.html
+		Automatic merge failed; fix conflicts and then commit the result.
+
+	THERE ARE 3 WAYS OF RESOLVING THIS CONFLICT:
+		
+		1--USE THE VS CODE: IT PROVIDES SOME POSSIBLE WAYS OF RESOLVING CONFLICTS LIKE 
+			a--Accept Current Change
+			b--Accept Incoming Change
+		
+		2--COMMIT EVERYTHING AND MERGE THE MODIFIED 'MASTER' BRANCH INTO THE 'FEATURE' BRANCH.
+			scien@Sciencegeek MINGW64 ~/OneDrive/Desktop/Git_Folder 			(E-199999)
+			$ git merge master
+			Updating 597e9e8..66fa372
+			Fast-forward
+			 contact.html | 2 +-
+			 1 file changed, 1 insertion(+), 1 deletion(-)
+		
+		3--CHANGE EVERYTHING MANUALLY
+		
+		NOW THE 'FEATURE' ITSELF WILL BE UPDATED WITH MINISCUAL CHANGES OF 'MASTER' AND THEN WE ARE FREE TO GO MERGING 'FEATURE' INTO 'MASTER'
+
+
+IF YOU WANT TO CREATE AND CHECKOUT TO A NEW BRANCH IN ONE COMMAND:
+
+	scien@Sciencegeek MINGW64 ~/OneDrive/Desktop/Git_Folder (master)
+	$ git checkout -b locked
+	Switched to a new branch 'locked'
+
+BRANCH CHECK:
+	scien@Sciencegeek MINGW64 ~/OneDrive/Desktop/Git_Folder (locked)
+	$ git branch
+	  E-199999
+	* locked   <----CURRENTLY IN LOCKED BRANCH
+	  master
+
+#STASHING

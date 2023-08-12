@@ -1,0 +1,25 @@
+/* Reset default margin and padding */
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+/* Center align the video */
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Adjust this value as needed */
+    background-color: #f0f0f0; /* Background color for illustration */
+}
+
+#display{
+    background-color: rgb(0,120,200);
+    display: inline;                           /*You can change the "display type" to make it appear block or inline. */
+    color:rgb(45, 45, 45) ;
+}
+
+.white{
+    font-style:spacemono;
+    color: #f0f0f0;
+}

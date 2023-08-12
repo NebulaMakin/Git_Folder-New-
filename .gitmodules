@@ -1,0 +1,3 @@
+[submodule "Git_Folder"]
+	path = Git_Folder
+	url = https://github.com/NebulaMakin/Git_Folder.git

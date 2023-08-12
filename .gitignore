@@ -1,0 +1,4 @@
+/mylogs.log
+*.log
+ignore/
+test_2
