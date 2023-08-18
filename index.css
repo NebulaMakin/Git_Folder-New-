@@ -28,6 +28,9 @@ body, html {
     background-color: rgb(45, 45, 45);
 }
 
+.new-layout{
+    display: flex;
+}
 .new-layout div {
     background-color: red;
 }
