@@ -29,9 +29,9 @@ body, html {
 }
 
 .new-layout{
-    display: flex;
+    display: flex;                /*Flexbox can allow you to change the layout of an element(i dont see any difference in inline and flex)*/
     flex-direction: column;                    /*You can also change the layout pattern to row or column*/
-}
+}   
 
 .new-layout div {
     background-color: red;
