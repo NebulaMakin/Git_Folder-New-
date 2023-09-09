@@ -37,6 +37,7 @@ body, html {
     background-color: red;
     height: 100px;
     width: 100px;
+    flex-basis: 200px;                               /*flex-basis always acts in the direction of <flex=direction> whech decides where the new element is added*/
     margin: 20px;
     border: solid rgb(255, 179, 0);
     border-width:2px;
