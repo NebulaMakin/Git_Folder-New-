@@ -72,6 +72,8 @@ body, html {
     flex-direction: row;
 }
 
+/*...Conversely there is another type of property called flex-grow (higher the number hegher the rate of growth)*/
+
 .new-layout div {
     background-color: red;
     height: 100px;
