@@ -1,0 +1,29 @@
+#img-caption{
+    display: block;
+}
+
+#title{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+
+#image{
+    height: auto;
+    display: block;
+    max-width: 50%;
+    margin: auto;
+}
+
+#img-caption{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+#tribute-info{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
