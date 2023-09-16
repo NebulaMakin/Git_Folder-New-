@@ -9,7 +9,8 @@ body, html {
     display: flex;
 
     justify-content: center;
-    align-content: center;
+    /*flex-direction: column*/;        /*Try this after removing...*/
+    align-items: center;/*..this* */          /*(first remove this and observe the results then try adding flex-direction)*/
 
     height: 100vh; /* Adjust this value as needed */
     background-color: #f0f0f0; /* Background color for illustration */
