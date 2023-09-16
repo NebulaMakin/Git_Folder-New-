@@ -38,6 +38,10 @@ body, html {
     flex-direction: row;
 }
 
+.wrap {
+    display: flex;                
+    flex-direction: row;                    
+}   
 /*
     So far, all the properties in the challenges apply to the flex container (the parent of the flex items). However, there are several useful properties for the flex items.
 
@@ -100,3 +104,51 @@ body, html {
     
 }
 
+
+.wrap div{
+    background-color: red;
+    height: 100px;
+    width: 100px;
+    flex-basis: 200px;
+    margin: 20px;
+    border: solid rgb(255, 179, 0);
+    border-width:2px;
+    border-left: 3px solid rgb(255, 179, 0);
+    border-bottom: 3px solid rgb(255, 179, 0);
+    
+}
+
+.i{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.ii{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+}
+
+.iii{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.iv{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.comment{
+    background-color: transparent;
+    border: transparent;
+    border-left: transparent;
+    border-bottom: transparent;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
