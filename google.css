@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+}
+nav div{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+nav div a{
+    padding: 10px;/*This decides the area covered by this class*/
+    background-color: rgb(32, 33, 36);
+    margin: 1px;/*..While this decides the spaces (not necessarilly between) left after occupying*/
+    list-style: none;
+    color: rgb(138, 180, 248);
+    font-size: small;
+}
+
+nav, footer {
+    flex-shrink: 0;
+}
+body {
+    font-family: arial,sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(32, 33, 36);
+}
+
+section {
+    flex-grow: 1;
+    background-color: rgb(32, 33, 36);
+    display: flex;
+    color: black;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 60vw;
+    height: 220px;
+    background: rgb(32, 33, 36);
+}
+
+logo {
+    font-family: cursive, system-ui;
+    display: flex;
+    justify-content: center;
+    color: antiquewhite;
+    font-size: 100px;
+}
+
+
+.layer {
+    padding: 15px 30px;
+    border-bottom: solid rgb(60, 64, 67) 1px;
+    background-color: rgb(23, 22, 25);
+    font-size: small;
+    color: rgb(154, 160, 166);
+
+}
+
