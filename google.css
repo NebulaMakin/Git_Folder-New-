@@ -36,6 +36,12 @@ section {
     align-items: center;
 }
 
+section span {
+    background-color: rgb(255, 255, 0);
+    height: 100px;
+    width: 100px;
+}
+
 #center-logo {
     flex-grow: 1;
     background-color: rgb(32, 0, 36);
