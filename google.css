@@ -36,6 +36,16 @@ section {
     align-items: center;
 }
 
+#center-logo {
+    flex-grow: 1;
+    background-color: rgb(32, 0, 36);
+    display: flex;
+    color: black;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 
 .logo {
     display: flex;
