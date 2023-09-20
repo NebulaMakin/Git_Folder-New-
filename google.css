@@ -20,7 +20,7 @@ nav, footer {
 }
 body {
     font-family: arial,sans-serif;
-    min-height: 100vh;
+    min-height: 200vh;                  /*Edited Minimum Height to show the scrolling effect*/
     display: flex;
     flex-direction: column;
     background-color: rgb(32, 33, 36);
@@ -41,7 +41,7 @@ section {                   /*This style positions the yellow box(span) relative
 }
 
 section span {
-    position: absolute;
+    position: fixed;                    /*This will ensure the position stays fixed irrespective of the change in screen scrolling*/
     top: 10px;            
     left: 10px;
     background-color: rgb(255, 255, 0);
