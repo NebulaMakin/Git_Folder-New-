@@ -68,3 +68,29 @@ function AddtoMyAge(incrementby, multiplyby){
 
 console.log(AddtoMyAge(5,2))
 
+// if-else statements//
+
+function GetLicense(age){
+    if(age>18){
+        return true
+    }
+    else{
+        return false
+
+    }
+}
+
+console.log(GetLicense(28))
+console.log(GetLicense(12))
+
+function performMath(number1, operation, number2){
+    if(operation=='+'){
+        return (number1 + number2) 
+    }
+    else if(operation == '*'){
+        return (number1*number2)
+    }
+}
+
+console.log(performMath(7,'+',8))
+console.log(performMath(7,'*',8))
