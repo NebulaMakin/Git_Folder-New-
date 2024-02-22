@@ -3,7 +3,7 @@
 
 console.log('Hello');
 
-//Always use let (var has isues)//
+//Always use let (var has iSsues)//
 /*Data Types ->
     Primitives 
         number
@@ -48,3 +48,23 @@ person['name'] = 'Stephen';
 
 let selection = 'name';
 person[selection] = 'Stephen';
+
+//fUNCTIONS//
+////let MyAge = 100                                     <-----------------------------------------
+///let sum =200                                                                                  \
+///let totalCount = 5                                                                            \
+///                                                                                              \
+///function AddtoMyAge(incrementby, multiplyby){                                                 \
+    ///MyAge = (MyAge + incrementby)*multiplyby     <- Bad practice as it modifies the variable 'MyAge'
+
+///}///
+
+const MyAge = 100     //unmutable i guess//
+let sum =200
+let totalCount = 5
+function AddtoMyAge(incrementby, multiplyby){
+    return (MyAge + incrementby)*multiplyby
+}
+
+console.log(AddtoMyAge(5,2))
+
