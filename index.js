@@ -148,10 +148,10 @@ function addFriends(){
 addFriends()
 console.log(botFriends)
 
-//Assigment operators //
+//Equality operators //
 let even_num = []
 
-//assignment operators are like:
+//equality operators are like:
 
 for(i=0;i<10;i++){
     if(i%2 === 0){
