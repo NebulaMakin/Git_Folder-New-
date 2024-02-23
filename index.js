@@ -49,6 +49,24 @@ person['name'] = 'Stephen';
 let selection = 'name';
 person[selection] = 'Stephen';
 
+//Another way of defining an Object//
+
+const myObject = {
+    keyname: {
+        'keyname 2.1': 'hello there (*/ω＼*)'
+    },
+    keyname2: 3
+}
+
+//SO IF I WANT TO ACCESS THE OBJECT'S -> OBJECT I WOULD...//
+
+console.log(myObject.keyname['keyname 2.1'])
+                                //   ^---------------If spaces exist keep it under quotes!
+        ///OR///
+console.log(myObject['keyname']['keyname 2.1'])
+                //      ^---------------------------------------Remember to keep the object-data-name or key-name under quotes!!! 
+
+
 //fUNCTIONS//
 ////let MyAge = 100                                     <-----------------------------------------
 ///let sum =200                                                                                  \
