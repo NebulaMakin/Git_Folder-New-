@@ -147,3 +147,18 @@ function addFriends(){
 
 addFriends()
 console.log(botFriends)
+
+//Assigment operators //
+let even_num = []
+
+//assignment operators are like:
+
+for(i=0;i<10;i++){
+    if(i%2 === 0){
+        even_num.push(i)
+    }
+    else if(i%2 !== 0){
+        continue
+    }
+}
+console.log(even_num)
