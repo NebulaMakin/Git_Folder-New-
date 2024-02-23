@@ -94,3 +94,39 @@ function performMath(number1, operation, number2){
 
 console.log(performMath(7,'+',8))
 console.log(performMath(7,'*',8))
+
+
+///Arrays///
+
+ // <Sub Part>  "push" //
+
+let myFriends = []      // <----An array declaration
+
+function addMyFriends(friend){
+    myFriends.push(friend)              //      <-----push function for an array [pushes the new element to the END of the array]
+    console.log(myFriends)
+}
+
+addMyFriends('Shawn')
+addMyFriends('Chad')
+
+ // <Sub Part>  "unshift" //
+
+
+ function addMyFriendsU(friend){
+    myFriends.unshift(friend)              //      <-----unshift function for an array [pushes the new element to the BIGINNING of the array]
+    console.log(myFriends)
+}
+
+addMyFriendsU('Shawn')
+addMyFriendsU('Chad')
+
+console.log(myFriends.length)
+
+console.log(myFriends.pop())
+//                      ^
+//                      |_________This function of pop() removes the last element in the array and RETURNS IT hence returning "Chad" 
+
+
+
+console.log(myFriends)
