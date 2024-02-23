@@ -130,3 +130,20 @@ console.log(myFriends.pop())
 
 
 console.log(myFriends)
+
+//ALSO YOU CAN USE THE INDEX VALUE OF EACH ELEMENT TO ADDRESS THE RESPECTIVE ELEMENT LIKE: myFriends[3] == "Chad"//
+
+/// For loop ///
+
+let botFriends = []
+f = 'Friend'
+
+function addFriends(){
+    for(i=0;i<10;i++){
+        friend = f + i
+        botFriends.push(friend)
+    }
+}
+
+addFriends()
+console.log(botFriends)
