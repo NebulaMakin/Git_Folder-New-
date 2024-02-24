@@ -192,3 +192,14 @@ mutate(person)
 console.log(person)
 
  // TLDR: OBJECTS ARE PASSED BY REFERENCE //
+
+function button(){
+    heading = document.querySelector('h1')              //  <-- In this function button()  
+                                                        // the object function querySelector('h1')
+                                                        // will select the heading with <h1> tag and pass
+                                                        // pass the respective reference to the heading 
+                                                        // in the variable 'heading'//
+
+
+    heading.style.color = 'red'                         //  <-- Using the referenced variable the style.color PROPERTY is set the color 'RED'// 
+}
