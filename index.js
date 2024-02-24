@@ -180,3 +180,15 @@ for(i=0;i<10;i++){
     }
 }
 console.log(even_num)
+
+
+///Pass by Referencing the objects///
+
+function mutate(obj) {           // Objects passed in a function is passed by reference so if we EDIT THIS!.. it will CHANGE THE OBJECT//
+    obj.age++   //     <-------------------------------------------------------------------------------_\
+}
+
+mutate(person)
+console.log(person)
+
+ // TLDR: OBJECTS ARE PASSED BY REFERENCE //
