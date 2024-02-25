@@ -176,3 +176,10 @@ space-evenly: Distributes space evenly between the flex items with a full space 
     flex-wrap: wrap;
     flex-direction: row;
 }
+
+.change {
+    background-color: red;
+    width: 15px;
+    height: 15px;
+    margin: 4px;
+}

@@ -203,3 +203,20 @@ function button(){
 
     heading.style.color = 'red'                         //  <-- Using the referenced variable the style.color PROPERTY is set the color 'RED'// 
 }
+
+function button2(){
+    alldiv = document.querySelectorAll('.change');         //  <-- The querySelector() function selects [ALL] elements instead of just first element//
+//     ^
+//     \____________________________________________The function querySelectorAll() returns a [ NodeList ] which is just like an Array...
+//                                            ...thus we can access each element belonging to this class like an array using the variable alldiv 
+//                                                                                                                                          \
+    for(let i=0;i<alldiv.length;i++){                                               //                                                      \
+                                                                                    //                                                      \
+        const div = alldiv[i];             //       <----------------------------------------------------------------------------------------
+        
+        div.style.background = 'yellow'
+    }
+
+    console.log('Button 1!');
+
+}
