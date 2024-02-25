@@ -196,7 +196,7 @@ console.log(person)
 function button(){
     heading = document.querySelector('h1')              //  <-- In this function button()  
                                                         // the object function querySelector('h1')
-                                                        // will select the heading with <h1> tag and pass
+                                                        // will select [FIRST] the heading with <h1> tag and pass
                                                         // pass the respective reference to the heading 
                                                         // in the variable 'heading'//
 
