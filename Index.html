@@ -16,8 +16,8 @@
     </p>
 </the-mess>
 
-<script src = index.js>                                     
-</script>                                                               <!--This is a script!!!-->
+<script>                                     
+</script>                                                               <!--This used to be a script!!!-->
 
 <h2 id = "display">Here is how a Scanning Tunneling Microscope works!!</h2>
 
@@ -40,6 +40,12 @@
 
 <button id = "increment">Increment Counter</button>        <!-- This button does not call any function but is processed by script.js... cuz it contains the code to target this particular element!-->
 <button id = "decrement">Decrement Counter</button>
+
+<ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
 
 <div class = "new-layout">
     <div></div>
@@ -69,5 +75,9 @@
 
 <script src="script.js">
 </script>
+<script src="index.js">
+</script>                                                   <!--Placed these scripts at the end of the document to make them execute at last...
+                                                            ... as i was getting the "Uncaught TypeError: Cannot read properties of null (reading 'querySelectorAll')"
+                                                            .. the javascript was not able to catch any <ul> element in the html file as it was being executed first-->
 </body>
 </html>

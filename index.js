@@ -220,3 +220,9 @@ function button2(){
     console.log('Button 1!');
 
 }
+
+const ul = document.querySelector('ul')
+const li = ul.querySelectorAll('li')
+//              ^
+//ALSO!! u can't use this: ul.getElementById('li'), as every element is not granted this function//
+console.log(li)
