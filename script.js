@@ -3,11 +3,19 @@ const incrementbtn = document.querySelector('#increment')               // This 
 const decrementbtn = document.querySelector('#decrement')
 let counter = 0
 
+const ulElement = document.getElementById('list-items')
+
 function incrementCounter(){
     const counterEl = document.getElementById('counter')                //#2 The counterEl references the element with id = counter
     counter++                                                           // editing the counter variable according to the function
     counterEl.innerText = counter                                       // using the instance of the counter element edit it's value to be of counter//
                                                                         // ex:- counter=0  -->  counter++  --> counter=1 and assigns the value to counter element
+
+    //create an element//
+    const li = document.createElement('li')
+
+    //append that element//
+    ulElement.appendChild(li)
 }
 
 function decrementCounter(){
