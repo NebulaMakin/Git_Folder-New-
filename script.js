@@ -14,6 +14,15 @@ function incrementCounter(){
     //create an element//
     const li = document.createElement('li')
 
+    //In the DOM structure there is something called a 'NODE' every element in the DOM is stored and interpreted as a 'Node'.
+    //If NodeList = Array, then: A Node = Array[i] (a particular element in the array).
+    
+    // Now these all of the DOM element we are accessing are preety obvious like <ul>,<li>,<div>, etc. 
+    
+    // [There is another Node called 'TextNode' which can be dynamically created using a function createTextNode(<string>) ] 
+    textnode = document.createTextNode('List: ' + counter)
+    li.appendChild(textnode)
+
     //append that element//
     ulElement.appendChild(li)
 }
