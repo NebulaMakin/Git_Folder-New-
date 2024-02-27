@@ -13,6 +13,7 @@ function incrementCounter(){
 
     //create an element//
     const li = document.createElement('li')
+    const b = document.createElement('b')                           // Now suppose you need to make the 'List' part to be bold, then u do this//
 
     //In the DOM structure there is something called a 'NODE' every element in the DOM is stored and interpreted as a 'Node'.
     //If NodeList = Array, then: A Node = Array[i] (a particular element in the array).
@@ -20,8 +21,18 @@ function incrementCounter(){
     // Now these all of the DOM element we are accessing are preety obvious like <ul>,<li>,<div>, etc. 
     
     // [There is another Node called 'TextNode' which can be dynamically created using a function createTextNode(<string>) ] 
-    textnode = document.createTextNode('List: ' + counter)
-    li.appendChild(textnode)
+
+
+//  const textnode = document.createTextNode('List: ' + counter)
+//  li.appencChild(textnode)
+
+
+    const textnode = document.createTextNode('List: ')
+    const textnode2 = document.createTextNode(counter)
+
+    b.appendChild(textnode)
+    li.appendChild(b)
+    li.appendChild(textnode2)
 
     //append that element//
     ulElement.appendChild(li)
