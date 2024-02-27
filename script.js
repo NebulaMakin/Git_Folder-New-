@@ -13,6 +13,7 @@ function incrementCounter(){
 
     //create an element//
     const li = document.createElement('li')
+    li.setAttribute('data-counter', counter)                        // This sets the data-counter attribute to the value of 'counter' For it to be used in #3
 //  const b = document.createElement('b')                           // Now suppose you need to make the 'List' part to be bold, then u do this//
     
     li.innerHTML = '<b>List: </b>' + counter                        // ..Or u can implicitly tell the browser to add this tag in the ulElement// 
@@ -42,6 +43,12 @@ function incrementCounter(){
 
 function decrementCounter(){
     const counterEl = document.getElementById('counter')
+
+    const li = document.querySelector('[data-counter = "'+counter+'"]') //#3 Here the 'li' variable of decrementCounter() scope 
+                                                                        //is assigned the reference to the same <li> element 
+                                                                        //with data-counter attribute...//
+    li.remove()                                                         // ..And that <li> is deleted from the DOM Structure//
+                                                                        
     counter--
     counterEl.innerText = counter
 }
