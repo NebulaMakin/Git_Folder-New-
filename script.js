@@ -15,7 +15,7 @@ function incrementCounter(){
     const li = document.createElement('li')
 //  const b = document.createElement('b')                           // Now suppose you need to make the 'List' part to be bold, then u do this//
     
-    li.innerHTML = '<b>List: </b>' + counter
+    li.innerHTML = '<b>List: </b>' + counter                        // ..Or u can implicitly tell the browser to add this tag in the ulElement// 
     
     //In the DOM structure there is something called a 'NODE' every element in the DOM is stored and interpreted as a 'Node'.
     //If NodeList = Array, then: A Node = Array[i] (a particular element in the array).
