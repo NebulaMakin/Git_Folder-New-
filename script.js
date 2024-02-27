@@ -48,6 +48,12 @@ function decrementCounter(){
                                                                         //is assigned the reference to the same <li> element 
                                                                         //with data-counter attribute...//
     li.remove()                                                         // ..And that <li> is deleted from the DOM Structure//
+
+
+//  const number = parseInt(li.getAttribute('data-counter'), 10)                      <-- This getAttribute() function can be used to get the attribute//
+//                    ^                                       ^___ Base 10 value integer
+//                    \
+//This changes the data-counter's data type from string to integer (as attributes are stored in string format in HTML)
                                                                         
     counter--
     counterEl.innerText = counter
