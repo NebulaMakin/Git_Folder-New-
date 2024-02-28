@@ -1,3 +1,6 @@
+//INSTRUCTION'S TO NAVIGATE THROUGH COMMENTS:
+// Use comments marked with '#NAVIGATION' to navigate through the code.
+
 
 const incrementbtn = document.querySelector('#increment')               // This creates the instance of the Increment button  -> #1//
 const decrementbtn = document.querySelector('#decrement')
