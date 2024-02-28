@@ -14,6 +14,15 @@ function incrementCounter(){
     //create an element//
     const li = document.createElement('li')
     li.setAttribute('data-counter', counter)                        // This sets the data-counter attribute to the value of 'counter' For it to be used in #3
+
+    if(counter%2 === 0){
+        // Setting the attribute of class = 'red' (for even number of counter).
+        li.setAttribute('class', 'red')
+    }
+    else{
+        // Setting the attribute of class = 'yellow' (for odd number of counter).
+        li.setAttribute('class', 'yellow')
+    }
 //  const b = document.createElement('b')                           // Now suppose you need to make the 'List' part to be bold, then u do this//
     
     li.innerHTML = '<b>List: </b>' + counter                        // ..Or u can implicitly tell the browser to add this tag in the ulElement// 
