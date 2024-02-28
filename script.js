@@ -16,12 +16,23 @@ function incrementCounter(){
     li.setAttribute('data-counter', counter)                        // This sets the data-counter attribute to the value of 'counter' For it to be used in #3
 
     if(counter%2 === 0){
-        // Setting the attribute of class = 'red' (for even number of counter).
-        li.setAttribute('class', 'red')
+//      li.setAttribute('class', 'red')
+
+//  Alternatively we can directly manipulate 
+// the 'background' attribute under 'style' attribute 
+// without and .red or .yellow classes//
+        li.style.background='red'
+        li.style.padding = '10px'
+
     }
     else{
-        // Setting the attribute of class = 'yellow' (for odd number of counter).
-        li.setAttribute('class', 'yellow')
+//      li.setAttribute('class', 'yellow')
+
+//  Alternatively we can directly manipulate 
+// the 'background' attribute under 'style' attribute 
+// without and .red or .yellow classes//
+        li.style.background='yellow'
+        li.style.padding = '20px'
     }
 //  const b = document.createElement('b')                           // Now suppose you need to make the 'List' part to be bold, then u do this//
     

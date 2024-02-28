@@ -183,11 +183,14 @@ space-evenly: Distributes space evenly between the flex items with a full space 
     height: 15px;
     margin: 4px;
 }
-
-.red {
+/*Alternatively we can directly manipulate 
+ the 'background' attribute under 'style' attribute 
+ without and .red or .yellow classes*/
+ 
+/*.red {
     background-color: red;
 }
 
 .yellow {
     background-color: yellow;
-}
+}*/
