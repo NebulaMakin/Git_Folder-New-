@@ -125,3 +125,26 @@ console.log(arr6)
     ...obj2
  }
  console.log(obj3)                                          // This will overwrite the earliest array(obj1) with the latest object(obj2)
+
+
+
+/// Arrow Funciton ///
+
+
+ // THIS GIVES AN ERROR:
+ // console.log(square(100))....
+ 
+ // Basic version:
+ // const square = (arg) => { return arg**2 }
+ // You can also do it like this:
+ const square = arg => arg**2
+ //const square = arg => arg**2             <--- You can pass argumments without brackets if arguments are less than 2.   //
+
+ console.log(square(100))
+ // ..but this does not:
+ console.log(cube(100))
+ // Because JAVASCRIPT automatically "Hoist's" the function definition of all the function's in the file at the beginning lines.// 
+
+ function cube(arg){
+    return arg**3
+ } 
