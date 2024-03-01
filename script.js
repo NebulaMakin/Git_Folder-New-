@@ -86,3 +86,42 @@ incrementbtn.addEventListener('click', incrementCounter)                //#1 The
 
 
 decrementbtn.addEventListener('click', decrementCounter)                
+
+
+///DESTRUCTURING///
+
+const arr1 = [1,2,3]
+const arr2 = [4,5,6]
+
+const arr3 = [...arr1, ...arr2]                         // It merges the content like: [1,2,3,4,5,6], and not like: [[1,2,3],[4,5,6]]
+
+console.log(arr3)
+
+ // Similiarly...
+
+ const arr4 = [{
+    name:'john'
+ }]
+ const arr5 = [{
+    name:'carter'
+ }]
+
+ const arr6 = [...arr4, ...arr5]
+
+console.log(arr6)
+
+ // But you can't merge 2 objects
+
+ const obj1 = {
+    name: 'john'
+ }
+
+ const obj2 = {
+    name: 'carter'
+ }
+
+ const obj3 = {
+    ...obj1,
+    ...obj2
+ }
+ console.log(obj3)                                          // This will overwrite the earliest array(obj1) with the latest object(obj2)
