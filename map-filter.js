@@ -36,3 +36,9 @@ console.log(TripleMapping)
 const FilteredArray = arr.filter((element) => element>=3)
 
 console.log(FilteredArray)
+
+//FIND//
+
+const findArray = arr.find((element) => element === 4)
+
+console.log(findArray)
