@@ -42,3 +42,9 @@ console.log(FilteredArray)
 const findArray = arr.find((element) => element === 4)
 
 console.log(findArray)
+
+//FOREACH//
+
+arr.forEach(element =>{
+    console.log(element)
+})
