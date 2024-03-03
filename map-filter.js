@@ -48,3 +48,16 @@ console.log(findArray)
 arr.forEach(element =>{
     console.log(element)
 })
+
+//REDUCE//
+
+ // .reduce is a function that acts like for loop for the array it is refering to,
+ // we do not need to explicitly programme it to traverse the whole array
+const sumOfArray = arr.reduce((acc,curr) => {
+    acc = acc + curr
+    return acc
+ },1)
+// ^-- You can also plug in the initial value of 'acc' as the second argument for .reduce() function//
+
+//...you can preety much guess at this point that 'acc' acts like 'sum' and 'curr' as arr[i]
+console.log(sumOfArray)
