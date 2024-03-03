@@ -1,3 +1,5 @@
+//MAPPING//
+
 const arr = [1,2,3,4,5]
 
 const newMappedArray = arr.map(double)                  //  <-- The map() FUNCTION in (arr) ARRAY maps the element's of (arr) ARRAY 
@@ -28,3 +30,9 @@ console.log(BinaryMapping)                              //  OUTPUT: [1,10,11,100
 const TripleMapping = arr.map(triple = (element) => element*3)
 
 console.log(TripleMapping)
+
+//FILTERING//
+
+const FilteredArray = arr.filter((element) => element>=3)
+
+console.log(FilteredArray)
