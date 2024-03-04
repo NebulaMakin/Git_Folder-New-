@@ -61,3 +61,34 @@ const sumOfArray = arr.reduce((acc,curr) => {
 
 //...you can preety much guess at this point that 'acc' acts like 'sum' and 'curr' as arr[i]
 console.log(sumOfArray)
+
+
+//TEMPLATE LITERALS//
+
+const me = `It's a meee...
+
+a MARIOOOO!!`
+//This doesn't breaks --^//
+
+//const me = 'It's a meee...
+//
+//a MARIOOO!!'           <---- But this does!
+
+const human = {
+    name: 'Am-Tu-Yung',
+    age: 18,
+    gender: false
+}
+const police = `Hi my name is ` +human.name+ `and i am ` +human.age+ ` years old`
+const police2 = `Hi my name is ${human.name} and i am ${human.age} years old`
+
+//Both the same thing but ${<variable>} is just too easy//
+console.log(police)
+console.log(police2)
+
+if(human.age < 18 && !human.gender){
+    console.log("NOO!! You Too Young!!")
+}
+else{
+    console.log("😁👍 GO FOR IT!!")
+}
